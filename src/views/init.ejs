@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/docs.css">
+  <title>Docs</title>
+</head>
+<body>
+  <div class="docs">
+    <section class="docs__box">
+      <div class="docs__head">
+        <h1>Can you please provide us with your contact information?</h1>
+      </div>
+      <form action="/upload" method="post" id="docs-form" class="docs__form" enctype="multipart/form-data">
+        <div class="input__docs">
+          <label for="name">First Name *</label>
+          <input type="text" id="name" name="name" placeholder="First Name ">
+        </div>
+        <div class="input__docs">
+          <label for="surname">Last Name *</label>
+          <input type="text" id="surname" name="surname" placeholder="Last Name">
+        </div>
+        <div class="input__docs">
+          <label for="email">Email *</label>
+          <input type="text" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="input__docs">
+          <label for="dni">DNI/NIA *</label>
+          <input type="text" id="dni" name="dni" placeholder="DNI" required>
+        </div>
+        <div class="input__docs">
+          <label for="documents" >Documents</label>
+          <input type="file" name="image" id="image" placeholder="Choose file or grag here">
+        </div>
+        <div class="input__docs--btn">
+          <input type="submit" class="btn__docs" id="btn-process" value="Next">
+        </div>
+      </form>
+
+      <a href="/checkeds"> Ver imagenes Subidas </a>
+
+      <div class="result">
+        <!-- <h2>Result:</h2>
+        <div id="result"></div> -->
+        
+      </div>
+    </section>
+  </div>
+</body>
+</html>

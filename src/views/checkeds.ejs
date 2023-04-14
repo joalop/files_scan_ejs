@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <!--<a href="/">Volver a comprobar DNI</a>-->
+        <a href="/">Volver a comprobar DNI</a>
+        <br><br>
+
+        <section class="principal">
+
+            <% if(array){ %>
+                <section class="imagenes">
+
+                    <% for(let i = 0; i < array.length; i++){ %>
+
+                        <div id="ejemplo<%- array[i].posicion%><%- array[i].posicion %>" class="ejemplos">
+                            <p class="parrafos_ini"> Pos <%- array[i].posicion %> </p>
+                            
+                            <img src="/images/<%- array[i].nombre%>" alt="Image DNI">
+
+                            <ul>
+                                <% array[i].ocr.forEach(function(element) { %>
+
+                                    <li><%= `${element}` %></li>
+
+                                <% }); %>
+                            </ul>
+
+                            <section class="resultados">
+                                <section class="secciones"> <h3>Datos Recibidos</h3></section>
+                                <% for(let j = 0; j < array[i].validaciones.length; j++){ %>
+                                <section class="secciones">
+                                    <p><%- array[i].validaciones[j][0]  %></p>
+
+                                    <div class="<%- array[i].validaciones[j][1] %>"> </div>
+
+                                </section>
+                                <% } %>
+
+
+
+                            </section>
+                        </div>
+                    <% } %>
+                </section>
+
+            <% }else{ %>
+
+                <p> No se han enviado Imagenes </p>
+
+            <% } %>
+
+        </section>
+
+
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+.docs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.docs__box {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #bebebe, -1px -1px 4px #bebebe;
+  width: 60%;
+  padding: 2rem;
+}
+.docs__box .docs__head {
+  text-align: center;
+}
+.docs__box .docs__head h1 {
+  font-size: 35px;
+  padding: 1rem;
+}
+.docs__box .docs__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  width: 100%;
+}
+.docs__box .docs__form .input__docs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.docs__box .docs__form .input__docs label {
+  color: #616161;
+  align-self: flex-start;
+  margin-top: 0.6rem;
+}
+.docs__box .docs__form .input__docs input {
+  width: 60%;
+  padding: 0.8rem;
+  margin: 0.6rem 0;
+  border: none;
+  border-bottom: 2px solid #0096E3;
+  transition: 0.7s;
+}
+.docs__box .docs__form .input__docs input:hover {
+  border-bottom: 3px solid #0096E3;
+}
+.docs__box .docs__form .input__docs input[type=file]::after {
+  cursor: pointer;
+}
+.docs__box .docs__form .input__docs input[type=file]::before {
+  cursor: pointer;
+}
+.docs__box .docs__form .input__docs #image {
+  padding: 5px;
+  border: 0.5px solid silver;
+  border-radius: 10px;
+}
+.docs__box .docs__form .input__docs--btn .btn__docs {
+  padding: 0.7rem 2.5rem;
+  margin-top: 2.5rem;
+  background: #0096E3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}/*# sourceMappingURL=docs.css.map */
